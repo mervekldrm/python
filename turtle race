@@ -1,0 +1,58 @@
+import turtle
+import random
+wn = turtle.Screen()
+
+track = turtle.Turtle()
+track.speed(0)
+track.penup()
+track.setpos(-140,120)
+track.pendown()
+
+for i in range(15):
+    track.write(i, align="center")
+    track.right(90)
+    for j in range(8):
+        track.penup()
+        track.forward(10)
+        track.pendown()
+        track.forward(10)
+    track.penup()
+    track.back(160)
+    track.left(90)
+    track.forward(20)
+track.hideturtle()
+
+rafael = turtle.Turtle()
+rafael.color("blue")
+rafael.shape("turtle")
+rafael.penup()
+rafael.setpos(-160,65)
+rafael.pendown()
+rafael.write("melih")
+
+donatello = turtle.Turtle()
+donatello.color("black")
+donatello.shape("turtle")
+donatello.penup()
+donatello.setpos(-160,45)
+donatello.pendown()
+donatello.write("donatello")
+
+leonardo = turtle.Turtle()
+leonardo.color("red")
+leonardo.shape("turtle")
+leonardo.penup()
+leonardo.setpos(-160,25)
+leonardo.pendown()
+leonardo.write("merve")
+
+for i in range(100):
+    rafael.speed(random.randrange(0,6))
+    donatello.speed(random.randrange(0,6))
+    leonardo.speed(random.randrange(0,6))
+    rafael.forward(random.randrange(1, 6))
+    donatello.forward(random.randrange(1, 6))
+    leonardo.forward(random.randrange(1, 6))
+
+
+wn.exitonclick()
